@@ -2,12 +2,8 @@
 
 //VARIABLES
 var celdas = new Array();  //guarda las celdas del dom
-var tablero = new Array(3);
-var fila1= new Array(3);
-var fila2= new Array(3);
-var fila3= new Array(3);
-
-tablero=(fila1,fila2,fila3);
+var tablero = new Array(2);
+var celdas = new Array(3);
 
 //REFERENCIAS
 //en cada posición guardo un elemento del dom
@@ -21,6 +17,17 @@ for (var i = 1; i < 10; i++) {
 }
 
 /////////////////////////////////////////////////////////////////////////////
+
+tablero[0]=celdas;
+tablero[1] = celdas;
+tablero [2]= celdas;
+
+rellenarTablero();
+
+
+console.log(tablero);
+
+
 
 //DECIDIR QUIEN EMPIEZA (USUARIO O MÁQUINA)
 var number = Math.floor(Math.random() * 2);
@@ -38,8 +45,13 @@ function juegaMaquina() {
   deshabilitarClick();
 
   //numero aleatorio para poner ficha
-  var posicionFicha = Math.floor(Math.random() *9);
+  var columna = Math.floor(Math.random() *3);
+  var fila = Math.floor(Math.random() *3);
+
+  verificarPosicion();
+
   
+
    
 
 }
@@ -50,12 +62,24 @@ function marcar() {
   console.log("entra a marcar");
 }
 function deshabilitarClick() {
-  for (var i = 1; i < 10; i++) {
+  for (var i = 1; i < celdas.length; i++) {
     celdas[i].style.pointerEvents = "none";
   }
 }
 function habilitarClick() {
-  for (var i = 1; i < 10; i++) {
+  for (var i = 1; i < celdas.length; i++) {
     celdas[i].style.pointerEvents = "auto";
+  }
+}
+function verificarPosicion(){
+  for (var i = 0; i < tablero.length; i++) {
+    
+  }
+}
+function rellenarTablero(){
+  for (var i = 0; i < tablero.length; i++) {
+    for(var j=0 ; i <tablero[i].length;j++){
+      tablero[i][j]=false;
+    }
   }
 }
