@@ -1,3 +1,25 @@
+.buttonContainer {
+  text-align: center;
+  margin-top: 5em;
+}
+h1 {
+  text-align: center;
+}
+.mensajes {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 2em;
+}
+#playAgain {
+  margin-top: 40px;
+  height: 60px;
+  width: 260px;
+  font-size: 30px;
+  border-radius: 20px;
+  background-color: #92e49e;
+  box-shadow: 20px 20px 30px -20px black;
+  cursor: pointer;
+}
 #table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -6,8 +28,5 @@
   border: 1px solid darkblue;
   width: 100px;
   height: 100px;
-  text-align: center;
-}
-h1{
   text-align: center;
 }
